@@ -1,9 +1,25 @@
-import React, { Component } from "react"
+import React, { useState, Component } from "react"
 import axios from "axios"
 
 import { DoughnutChart } from "./DoughnutChart"
+import { useDarkMode } from "./useDarkMode"
 
 const API = `http://localhost:5000/api/players`
+
+function ToggleButton() {
+  const [darkMode, setDarkMode] = useDarkMode("darkMode", false)
+
+  let toggleDarkMode = e => {
+    e.preventDefault()
+    setDarkMode(!darkMode)
+  }
+
+  return (
+    <button className="toggle" onClick={toggleDarkMode}>
+      Toggle Dark Mode
+    </button>
+  )
+}
 
 class App extends Component {
   state = { labels: [], data: [], colors: [] } // thanks class fields or something
@@ -29,9 +45,7 @@ class App extends Component {
       )
     })
   }
-  componentDidUpdate() {
-    
-  }
+  componentDidUpdate() {}
 
   generateRandomColor = () => {
     var r = Math.floor(Math.random() * 255)
@@ -41,11 +55,11 @@ class App extends Component {
     return `rgb(${r},${g},${b})`
   }
 
-
   render() {
     return (
       <div className="App">
         <h1>Women's World Cup</h1>
+        <ToggleButton />
         <div className="charts">
           <DoughnutChart
             labels={this.state.labels}

@@ -11,27 +11,6 @@ h1 {
   text-align: center;
   text-decoration: underline;
 }
-.countries {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.country {
-  border-radius: 0.25rem;
-  font-family: "Crimson Text", serif;
-  font-weight: 600;
-  line-height: 1.2;
-  outline: none;
-  height: 3rem;
-  font-size: 1.25rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-right: 1.2rem;
-  margin-bottom: 1rem;
-  background-color: rgb(56, 161, 105);
-  color: #fff;
-}
 .charts {
   font-family: "Vidaloka";
   font-size: 1.1rem;
@@ -39,5 +18,36 @@ h1 {
   border-radius: 5px;
   padding: 2rem;
   max-width: 1024px;
-  width: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.toggle {
+  font-family: "Vidaloka";
+  border-radius: 0.25rem;
+  font-weight: 600;
+  display: inline-flex;
+  -moz-appearance: none;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.2;
+  outline: currentcolor none medium;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1.125rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: rgb(68, 112, 233);
+  color: rgb(255, 255, 255);
+  margin-left: 42%;
+}
+.dark {
+  background-color: #313843;
+  color: white;
 }
