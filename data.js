@@ -29,7 +29,11 @@ exports.data = [
   { name: "Shanice van de Sanden", country: "Netherlands", searches: 3 },
   { name: "Cristiane Rozeira", country: "Brazil", searches: 3 },
   { name: "Alex Greenwood", country: "England", searches: 3 },
-  { name: "Bárbara Micheline do Monte Barbosa", country: "Brazil", searches: 2 },
+  {
+    name: "Bárbara Micheline do Monte Barbosa",
+    country: "Brazil",
+    searches: 2
+  },
   { name: "Alexandra Long", country: "United States", searches: 2 },
   { name: "Alyssa Naeher", country: "United States", searches: 2 },
   { name: "Gaëtane Thiney", country: "France", searches: 2 },
@@ -99,6 +103,5 @@ exports.data = [
   { name: "Lina Magull", country: "Germany", searches: 1 },
   { name: "Karen Bardsley", country: "England", searches: 1 },
   { name: "Jordyn Huitema", country: "Canada", searches: 1 },
-  { name: "Tierna Davidson", country: "United States", searches: 1 },
-];
-
+  { name: "Tierna Davidson", country: "United States", searches: 1 }
+]
