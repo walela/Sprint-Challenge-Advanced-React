@@ -1,8 +1,13 @@
 import React from "react"
 import { Doughnut } from "react-chartjs-2"
+import { useLocalStorage } from "./useLocalStorage"
 
 const DoughnutChart = props => {
-  const data = {
+  console.log(props)
+  const [config] = useLocalStorage("config", props)
+  const { labels, data, colors } = config
+
+  const chartData = {
     labels: props.labels,
     datasets: [
       {
@@ -20,7 +25,7 @@ const DoughnutChart = props => {
     }
   }
 
-  return <Doughnut data={data} options={options} />
+  return <Doughnut data={chartData} options={options} />
 }
 
 export { DoughnutChart }

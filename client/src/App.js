@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import axios from "axios"
-import uuid from "uuid"
 
 import { DoughnutChart } from "./DoughnutChart"
 
@@ -29,6 +28,9 @@ class App extends Component {
         }
       )
     })
+  }
+  componentDidUpdate() {
+    
   }
 
   generateRandomColor = () => {
