@@ -3,7 +3,7 @@ import axios from "axios"
 
 const API = `http://localhost:5000/api/players`
 class App extends Component {
-  state = { players: [] }
+  state = { players: [] } // thanks class fields or something
 
   componentDidMount() {
     axios
@@ -11,7 +11,7 @@ class App extends Component {
       .then(res => {
         this.setState({ players: res.data })
         console.log(`Data fetch successful. State:`)
-        console.log("\t\t\t", this.state)
+        console.log(this.state)
       })
       .catch(err => console.error(err))
   }
