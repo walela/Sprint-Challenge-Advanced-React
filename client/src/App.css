@@ -1,0 +1,43 @@
+:root {
+  box-sizing: border-box;
+  font-family: "Vidaloka", serif;
+}
+
+body {
+  width: 100vw;
+}
+h1 {
+  font-family: "Lacquer", sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.country {
+  border-radius: 0.25rem;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  outline: none;
+  height: 3rem;
+  font-size: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;
+  background-color: rgb(56, 161, 105);
+  color: #fff;
+}
+.charts {
+  font-family: "Vidaloka";
+  font-size: 1.1rem;
+  background: white;
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 1024px;
+  width: 100%;
+}
