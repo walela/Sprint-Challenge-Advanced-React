@@ -38,28 +38,16 @@ class App extends Component {
 
     return `rgb(${r},${g},${b})`
   }
-  handleClick = e => {
-    const country = e.target.innerText
-    const players = this.state.players.filter(
-      player => player.country === country
-    )
-    this.setState({
-      labels: [players.map(player => player.name)],
-      data: [players.map(player => player.searches)],
-      colors: this.state.labels.map(() => this.generateRandomColor())
-    })
-  }
+
 
   render() {
-    console.log(this.state.data)
-    console.log(this.state.labels)
     return (
       <div className="App">
         <h1>Women's World Cup</h1>
         <div className="charts">
           <DoughnutChart
-            data={this.state.data}
             labels={this.state.labels}
+            data={this.state.data}
             colors={this.state.colors}
           />
         </div>
